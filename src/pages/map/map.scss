@@ -6,3 +6,7 @@ page-map {
     z-index: 0;
   }
 }
+
+page-map.ion-page.show-page ~ .nav-decor {
+    display: none!important;
+}

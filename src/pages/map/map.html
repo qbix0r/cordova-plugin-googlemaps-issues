@@ -6,17 +6,18 @@
       </button>
     </ion-buttons>
     <ion-title>
-      Contact
+      Map
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <div #mapCanvas id="mapCanvas"></div>
+
+  <ion-fab bottom right *ngIf="selectedMarker">
+    <button ion-fab color="crumbs-outline" (click)="showMarkerDetails()">
+      <ion-icon name="ios-eye-outline"></ion-icon>
+    </button>
+  </ion-fab>
+
 </ion-content>

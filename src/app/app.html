@@ -1,1 +1,19 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" [enabled]="true" (ionOpen)="onMenuOpen()" (ionClose)="onMenuClose()" side="left">
+  <ion-header>
+    <ion-navbar>
+      <ion-title>Sidemenu</ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only menuToggle>
+          <ion-icon name='close'></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <ion-item>
+      Some item
+    </ion-item>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Map Ios
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div #mapCanvasIos id="mapCanvasIos"></div>
+
+  <ion-fab bottom right *ngIf="selectedMarker">
+    <button ion-fab color="crumbs-outline" (click)="showMarkerDetails()">
+      <ion-icon name="ios-eye-outline"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

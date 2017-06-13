@@ -4,16 +4,16 @@ import {Events, NavController, Platform} from 'ionic-angular';
 declare var plugin: any;
 
 @Component({
-  selector: 'page-map',
-  templateUrl: 'map.html'
+  selector: 'page-map-ios',
+  templateUrl: 'map-ios.html'
 })
-export class MapPage {
+export class MapIosPage {
 
   private mapObject: any;
   private points: any;
 
-  private defaultMarkerIcon: any = {url: 'https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/67-512.png', size: {width: 48, height: 48}};
-  private selectedMarkerIcon: any = {url: 'http://www.iconsdb.com/icons/preview/green/map-marker-2-xxl.png', size: {width: 48, height: 48}}
+  private defaultMarkerIcon: any = {url: 'assets/marker-red.png', size: {width: 28, height: 48}};
+  private selectedMarkerIcon: any = {url: 'assets/marker-yellow.png', size: {width: 28, height: 48}}
 
   private selectedMarker: any;
 
@@ -38,7 +38,7 @@ export class MapPage {
     if(!this.platform.is('cordova'))
       return;
 
-    let div = document.getElementById("mapCanvas");
+    let div = document.getElementById("mapCanvasIos");
 
     let config = {
         'camera': {
